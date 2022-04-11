@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+
+}
+body{
+    background-image: linear-gradient(90deg,rgb(144, 214, 228),rgb(123, 155, 237));
+    font-family:'Roboto',sans-serif;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    overflow: hidden;
+    height:100vh;
+}
+
+.search{
+    position: relative;
+    height:50px;
+}
+
+.search .input{
+    font-size: 18px;
+    width:50px;
+    height: 50px;
+    transition: width 0.3s ease;
+    /* padding:15px; */
+    border:0;
+}
+.search .btn{
+    font-size: 24px;
+    width:50px;
+    height: 50px;
+    cursor: pointer;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: aliceblue;
+    color:rgb(81, 110, 237);  /*icons会继承*/
+    border:0;
+    transition:transform 0.3s ease;
+}
+.btn:active {   /* 点击*/
+    background-color: rgb(212, 218, 224);
+}
+.bnt:focus,.input:focus{
+    outline:none;
+}
+.search.active .input{
+    width:200px;
+}
+
+.search.active .btn{
+    transform: translateX(198px);
+}
